@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUTTON EFFECT</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .btnsend{
+            border: 2px solid coral;
+            font-size: 16px;
+            margin:50px 0 0 250px;
+            color: greenyellow;
+            padding: 10px;
+            display: inline-block;
+            box-sizing: border-box;
+            text-decoration: none;
+            position: relative;
+            /* border-radius: 2px; */
+            /* transition: all 0.5s ease 0s;   */
+        }
+
+        .btnsend:after{
+            background-color: coral;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            content: "";
+            z-index: -1;  
+            transition: all 0.5s ease 0s;  
+        }
+
+        .btnsend:hover{
+            color:white;
+            border: 2px double blueviolet;
+        }
+
+        .btnsend:hover:after{
+             width:100%; 
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <a  class="btnsend" href="#">HOVER ME</a>
+</body>
+</html>

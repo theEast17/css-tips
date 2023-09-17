@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow</title>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+            /* background-color: rgb(9, 203, 237); */
+            background-color: black; 
+            overflow: hidden; 
+        } 
+        .sun{
+            position: absolute;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            top: 5%;
+            left: 75%;
+            background-color: white;
+            box-shadow: 0px 0px 50px white;
+            animation: sun 5s linear infinite;
+            transition: 2s;
+            z-index: 1;
+        }
+        @keyframes sun{
+            0%{
+                box-shadow: 0px 0px 50px white;
+            }
+            30%{
+                box-shadow: 0px 0px 30px white;
+            }
+            50%{
+                box-shadow: 0px 0px 1px white;
+            }
+            100%{
+                box-shadow: 0px 0px 50px white;
+            }
+        }
+        /* @keyframes sun{
+            0%{
+                left:-10%;
+            }
+            30%{
+                left:30%;
+            }
+            50%{
+                left:50%;
+                top: 2%;
+            }
+            100%{
+                left: 100%;
+            }
+        } */
+
+        H2{
+            font-size: 40PX;
+            color:yellow; 
+            position: absolute;
+            top: 45%;
+            left: 35%;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-shadow: 27px 20px 3px grey;
+            animation: shadow 5s linear infinite;
+            transition: 5s;
+            z-index: 2;
+        }
+        @keyframes shadow{
+            0%{
+                text-shadow: 27px 20px 3px grey;
+            }
+            30%{
+                text-shadow: 18.9px 20px 3px grey;
+            }
+            50%{
+                text-shadow: 13.5px 25px 0px grey;
+            }
+            75%{
+                text-shadow: -35px 20px 10px grey;
+
+            }
+            100%{
+                text-shadow: -40px 20px 15px grey;
+            }
+        }
+            .night{
+                position: absolute;
+                text-decoration: NONE;
+                bottom: 10%;
+                left: 42%;
+                color: white;
+                font-size: 20PX;
+                padding: 5PX;
+                border-radius: 5PX;
+                color:chartreuse;
+                box-shadow: 0 0 10px white;
+            }
+
+            a{
+                z-index: 3;
+                transition: 2s;
+                animation: color 5s linear infinite;
+            }
+            @keyframes color{
+                0%{
+                    background-color: purple;
+                }
+                20%{
+                    background-color: darkred;
+                    color: whitesmoke;
+                }
+                40%{
+                    background-color: orange;
+                }
+                60%{
+                    background-color: red;
+                }
+                80%{
+                    background-color: olive;
+                }
+                100%{
+                    background-color: purple;
+                }
+            }
+            span{
+                height: 80px;
+                width: 80px;
+                border-Radius: 50%;
+                box-shadow: 0 0 5px white;
+                position: absolute;
+                animation: star 10s linear infinite;
+                transition: 2s ease;
+                /* top: 20%;
+                left: 50%; */
+            } 
+            @keyframes star{
+                0%{
+                   /* box-shadow: 0 0 50PX purple; */
+                   box-shadow:INSET 0 0 10PX purple;
+                   /* transform: translatey(-100%); */
+                   transform: translatey(-100px);
+                   background: linear-gradient(to right, #e55d87, #5fc3e4);
+                  
+                }
+                20%{
+                    /* box-shadow: 0 0 50PX darkblue; */
+                    box-shadow: INSET 0 0 10PX darkblue;
+                    /* transform: scale(1.5); */
+                    /* transform: translatey(-40%); */
+                    transform: translatey(0px);
+                    background: linear-gradient(#f09819, #edde5d);
+                   
+                    /* transform: translateZ(-50%);  */
+                    
+                }
+                40%{
+                    /* box-shadow: 0 0 50PX orange; */
+                    box-shadow:INSET 0 0 10PX orange;
+                    /* transform: scale(1); */
+                    /* transform: translatey(10%); */
+                    transform: translatey(150px);
+                    background: linear-gradient(to right, #e55d87, #5fc3e4);
+                    /* transform: translateZ(0%); */
+                   
+                }
+                60%{
+                    /* box-shadow: 0 0 50PX RED; */
+                    box-shadow:INSET 0 0 10PX red;
+                    /* transform: scale(1.5); */
+                    /* transform: translatey(50%); */
+                    transform: translatey(280px);
+                    background: linear-gradient(#f09819, #edde5d);
+                    /* transform: translateZ(30%); */
+                   
+                }
+                80%{
+                    /* box-shadow: 0 0 50PX olive; */
+                    box-shadow:INSET 0 0 10PX olive;
+                    /* transform: scale(1); */
+                    /* transform: translatey(80%); */
+                    transform: translatey(365px);
+                    background: linear-gradient(to right, #e55d87, #5fc3e4);
+                    /* transform: translateZ(70%); */
+                  
+                }
+                100%{
+                    /* box-shadow: 0 0 50PX purple; */
+                    box-shadow:INSET 0 0 10PX purple;
+                    /* transform: scale(1.5); */
+                    /* transform: translatey(100%); */
+                    transform: translatey(490px);
+                    background: linear-gradient(#f09819, #edde5d);
+                    /* transform: translateZ(100%); */
+                   
+                }
+            }
+
+            .star1{
+                top: 30%;
+                left: 50%;
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;   
+            }
+            .star2{
+                top: 70%;
+                left: 30%;   
+            }
+            .star3{
+                top: 60%;
+                left: 70%;
+                height: 25px;
+                width: 25px;
+                border-radius: 50%;    
+            }
+            .star4{
+                top: 50%;
+                left: 80%;   
+            }
+            .star5{
+                top: 12%;
+                left: 90%;   
+                height: 35px;
+                width: 35px;
+                border-radius: 50%; 
+            }
+            .star6{
+                top: 76%;
+                left: 93%;   
+            }
+            .star7{
+                top: 21%;
+                left: 34%;   
+            }
+            .star8{
+                top: 9%;
+                left: 87%;   
+            }
+            .star9{
+                top: 35%;
+                left: 77%;   
+            }
+            .star10{
+                top: 23%;
+                left: 5%;   
+            }
+            .sta11{
+                top: 9%;
+                left: 40%;   
+            }
+            .star12{
+                top: 23%;
+                left: 47%;   
+            }
+            .star13{
+                top: 45%;
+                left: 20%; 
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;  
+            }
+            .star14{
+                top: 85%;
+                left: 12%;   
+            }
+            .star15{
+                top: 70%;
+                left: 5%;   
+            }
+
+
+
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="sun"></div>
+    <h2>WELCOME HERE...</h2>
+    <A  class="night"> &#127776 GOOD NIGHT</A>
+    <span class="star1"></span>
+    <span class="star2"></span>
+    <span class="star3"></span>
+    <span class="star4"></span>
+    <span class="star5"></span>
+    <span class="star6"></span>
+    <span class="star7"></span>
+    <span class="star8"></span>
+    <span class="star9"></span>
+    <span class="star10"></span>
+    <span class="star11"></span>
+    <span class="star12"></span>
+    <span class="star13"></span>
+    <span class="star14"></span>
+    <span class="star15"></span>
+</body>
+</html>

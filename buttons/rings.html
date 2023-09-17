@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d-Rings</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: radial-gradient(circle, #e55d87, #5fc3e4);
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: transparent;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+            height: 300px;
+            width: 300px;
+            border-radius: 10px;
+            transition: 2s;
+            animation: moving 7s linear infinite;
+
+            /* here it is for 3d */
+
+            transform-style: preserve-3d;
+            transform: perspective(500px) rotatex(135deg);
+
+        }
+        @keyframes moving{
+            0%{
+                transform: rotatez(0deg);
+                height: 300px;
+                width: 300px;
+            }
+            100%{
+                transform: rotatez(360deg);
+                height: 250px;
+                width: 250px;
+            }
+        }
+
+        .container span{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border: 15px solid white;
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 50%;
+            animation: move 8s ease-in-out infinite;
+            animation-delay: calc(-1.5s * var(--i));
+            transition: 2s;
+            /* border-color: yellow;
+            background-color: #e55d87; */
+        }
+            
+        
+        @keyframes move{
+            0%{
+                transform: translatez(-100px);
+                width: 100%;
+                height: 100%;
+            }
+            25%{
+                transform: translatez(100px);
+                width: 100%;
+                height: 100%;
+            }
+            50%{
+                transform: translatez(-100px);
+                width: 15%;
+                height: 15%;
+            }
+            75%{
+                transform:translatez(-100px);
+                width: 15%;
+                height: 15%;
+            }
+            100%{
+                transform: translatez(-100px);
+                width: 100%;
+                height: 100%;
+            }
+        }
+         /* .s_1{
+            animation-delay: -1s;
+        }
+        .s_2{
+            animation-delay: -2s;
+        }
+        .s_3{
+            animation-delay: -3s;
+        }
+        .s_4{
+            animation-delay: -4s;
+        }
+        .s_5{
+            animation-delay: -5s;
+        }
+        .s_6{
+            animation-delay: -6s;
+        }
+        .s_7{
+            animation-delay: -7s;
+        }
+        .s_8{
+            animation-delay: -8s;
+        }*/
+       
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span style="--i:1;border: 10px solid yellow;"></span>
+        <span style="--i:2;border: 10px solid blue;"></span>
+        <span style="--i:3;border: 10px solid darkturquoise;"></span>
+        <span style="--i:4;border: 10px solid red;"></span>
+        <span style="--i:5;border: 10px solid pink;"></span>
+        <span style="--i:6;border: 10px solid purple;"></span>
+        <span style="--i:7;border: 10px solid green;"></span>
+        <span style="--i:8;"></span>
+    </div>
+
+</body>
+
+</html>
